@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_prayer_detail" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schedule Prayer"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/date_calendar"
+                            android:tint="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_schedule_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Day"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_schedule_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sedang menampilkan lokasi"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Detail Schedule Prayer"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_pray_fajr"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@drawable/bg_circle_radius"
+                                    android:padding="10dp"
+                                    android:src="@drawable/date_calendar"
+                                    android:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_name_fajr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_fajr"
+                                    android:text="Subuh"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_time_fajr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_pray_name_fajr"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_fajr"
+                                    android:text="Subuh"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_pray_name_imsak"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@drawable/bg_circle_radius"
+                                    android:padding="10dp"
+                                    android:src="@drawable/date_calendar"
+                                    android:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_name_imsak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_imsak"
+                                    android:text="Imsak"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_time_imsak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_pray_name_imsak"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_imsak"
+                                    android:text="Imsak"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_pray_name_dhuhr"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@drawable/bg_circle_radius"
+                                    android:padding="10dp"
+                                    android:src="@drawable/date_calendar"
+                                    android:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_name_dhuhr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_dhuhr"
+                                    android:text="Dhuhur"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_time_dhuhr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_pray_name_dhuhr"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_dhuhr"
+                                    android:text="Dhuhur"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_pray_name_asr"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@drawable/bg_circle_radius"
+                                    android:padding="10dp"
+                                    android:src="@drawable/date_calendar"
+                                    android:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_name_asr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_asr"
+                                    android:text="Ashar"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_time_asr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_pray_name_asr"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_asr"
+                                    android:text="Ashar"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_pray_name_maghrib"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@drawable/bg_circle_radius"
+                                    android:padding="10dp"
+                                    android:src="@drawable/date_calendar"
+                                    android:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_name_maghrib"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_maghrib"
+                                    android:text="Maghrib"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_time_maghrib"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_pray_name_maghrib"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_maghrib"
+                                    android:text="Maghrib"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_pray_name_isha"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@drawable/bg_circle_radius"
+                                    android:padding="10dp"
+                                    android:src="@drawable/date_calendar"
+                                    android:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_name_isha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_isha"
+                                    android:text="Isya"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pray_time_isha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_pray_name_isha"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_toEndOf="@+id/iv_pray_name_isha"
+                                    android:text="Isya"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
